@@ -1,21 +1,20 @@
 Assignment #1
 
-Hello CodeSchool apprentice, our BESTSELLER website seems to be malfunctioning. The text below our pictures do not seem to be displayed properly. The sizes of the titles, subtitles and paragraphs need to be fixed. This should take you about 5-10 minutes. 
+Hello CodeSchool apprentice, our BESTSELLER website seems to be malfunctioning. The text below our pictures are not displayed properly. The sizes of the titles, subtitles and paragraphs need to be fixed. 
+This should take you about 5-10 minutes. 
 
 Assignment #2
-Make the text more attractive by 
 
+Make the text more attractive by sectioning the text, put the titles and the subtext in sections. Also make keywords (you can choose them yourself) more interesting by making them stand out.
+This should take you about 10-15 minutes.
 
+Assignment #3
 
+The "my account page" is not available please make sure our customers can access their account page again. The code for the navigation bar can be found in navigation.html.
+This should take you about 5-10 minutes.
 
+Assignment #4
 
+Oh no! There seems to be a broken image next to the MEN's wear image. Please fix the image and make sure all the images are linked correctly to their product pages.
+This should take you about 5-10 minutes.
 
-
-
-
-
-
-
-
-The code for the navigation bar can be found in navigation.html and is included in the index.html file at line 9. 
-Make a myAccount.html file 
