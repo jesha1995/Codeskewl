@@ -1,0 +1,21 @@
+Assignment #1
+
+Hello CodeSchool apprentice, our BESTSELLER website seems to be malfunctioning. The text below our pictures do not seem to be displayed properly. The sizes of the titles, subtitles and paragraphs need to be fixed. This should take you about 5-10 minutes. 
+
+Assignment #2
+Make the text more attractive by 
+
+
+
+
+
+
+
+
+
+
+
+
+
+The code for the navigation bar can be found in navigation.html and is included in the index.html file at line 9. 
+Make a myAccount.html file 
