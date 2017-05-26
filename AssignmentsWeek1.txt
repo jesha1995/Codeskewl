@@ -1,6 +1,6 @@
 Assignment #1
 
-Hello CodeSchool apprentice, our BESTSELLER website seems to be malfunctioning. The text below our pictures are not displayed properly. The sizes of the titles, subtitles and paragraphs need to be fixed. 
+Hello CodeSchool apprentice, our BESTSELLER website seems to be malfunctioning. The text below our pictures are not displayed properly. The titles, subtitles and paragraphs need to be fixed. There should be one header, two subheaders and 3 paragraphs.  
 This should take you about 5-10 minutes. 
 
 Assignment #2
