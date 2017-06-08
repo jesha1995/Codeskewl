@@ -1,6 +1,12 @@
-body{
-    font-family: "Work Sans", sans-serif!important;
+@font-face {
+    font-family: Adelle;
+    src: url(./fonts/adelle_regular.woff);
 }
+
+body{
+    font-family: "Work Sans", sans-serif;
+}
+
 #flipkart-navbar {
     background-color: #867d6b;
     color: #ded6c5;
@@ -34,7 +40,6 @@ body{
     display: inline-block;
     padding: 5px 11px;
     line-height: 23px;
-    font-family: "Work Sans", sans-serif;;
     letter-spacing: 0;
     color: inherit;
     border: none;
@@ -231,7 +236,6 @@ body{
 .single-portfolio a::after {
     color: #b5b5b5;
     content: "Shop now!";
-    font-family: "Work Sans",sans-serif;
     font-weight: bold;
     font-size: 27px;
     left: 0;
@@ -250,3 +254,4 @@ section {
     margin-top: 3em;
     margin-bottom: 3em;
 }
+
