@@ -1,0 +1,28 @@
+Hello CodeSchool apprentice! Welcome to week 2 where you will play around with some css.
+
+Assignment #1
+
+Oh boy! The website looks too colorfull, no Scandinavian feel at all. The BESTSELLER brand is not represented correctly. Please change the background and title colors.
+-Change the background to this color: #f1f1f1
+-Change the titles to this color: #867d6b
+This should take you about 5-10 minutes
+
+
+Assignment #2
+
+It is time for some spring cleaning! We have changed our styling standards and want to make things more neat. We want you to move the inline css to the seperate css file called style.css and apply it using the relevant ID's and/or classes.
+This should take you about 10-15 minutes
+
+Assignment #3
+
+The website is looking much better already. Let's improve BESTSELLER's brand identity by changing the main font and the font of the titles.
+-Change the main font to : "Work Sans", sans-serif;
+-Change the font of the titles to : "Adelle", serif;
+This should take you about 10-15 minutes
+
+Assignment #4
+
+
+
+This should take you about 5-10 minutes.
+

@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var productList = new Array;
+        productList.push({
+            img: 'images/women1.jpg',
+            name: 'Red Boots1',
+            brand: 'ONLY',
+            price: '100,00'
+        });
+        productList.push({
+            img: 'images/women2.jpg',
+            name: 'Red Boots2',
+            brand: 'ONLY',
+            price: '200,00'
+        });
+        productList.push({
+            img: 'images/women3.jpg',
+            name: 'Red Boots3',
+            brand: 'ONLY',
+            price: '99,99'
+        });
+        productList.push({
+            img: 'images/women4.jpg',
+            name: 'Red Boots4',
+            brand: 'ONLY',
+            price: '199,99'
+        });
+        productList.push({
+            img: 'images/women5.jpg',
+            name: 'Red Boots5',
+            brand: 'ONLY',
+            price: '20,00'
+        });
+
+        var products = '';
+        for (var i = 0; i < productList.length; i++){
+            var product = productList[i];
+            products+= '<div class="col-md-3 col-sm-6 product-listing">'+
+                '<div class="single-shop-product">'+
+                '<div class="product-upper">'+
+                '<img src="' + product.img + '" alt="" class="img-PLP">'+
+                '</div>'+
+                '<h2><a class="product-name" href="">' + product.name + '</a></h2>'+
+                '<div class="product-carousel-price">'+
+                '<ins>€' + product.price + '</ins>'+
+                '</div>'+
+                '<div class="product-option-shop">'+
+                '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'+
+                '</div>'+
+                '</div>'+
+                '</div>';
+        }
+    </script>
+    <link rel="import" href="head.html">
+
+
+</head>
+
+<body style="background-color: #fff4c1;">
+<header id="header-nav"></header>
+        <div class="container">
+            <div class="row">
+	            <script>
+	            document.write(products);
+	            </script>
+            </div>
+        </div>
+</body>
+
+</html>

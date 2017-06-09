@@ -261,7 +261,7 @@ section {
 .add_to_cart_button {
     background: none repeat scroll 0 0 #867d6b;
     border: medium none;
-    color: #fff;
+    color: #fff !important;
     padding: 6px 25px;
     display: inline-block;
 }
@@ -279,4 +279,15 @@ section {
 
 .img-PLP{
     max-width:95%;
+    border-style: dotted;
+    border-width: 5px;
+    border-color: #867d6b;
+}
+
+a:-webkit-any-link{
+    text-decoration:none !important;
+}
+
+a.product-name:hover{
+  color: #867d6b;
 }
