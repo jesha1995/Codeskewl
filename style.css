@@ -7,12 +7,18 @@ body{
     font-family: "Work Sans", sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: #867d6b;
+    pointer-events:none;
+}
+
 #flipkart-navbar {
     background-color: #867d6b;
     color: #ded6c5;
 }
 
-.row1{
+.row{
     padding-top: 1em;
     padding-bottom: 1em;
 }
@@ -195,15 +201,7 @@ body{
     content: "";
     bottom: 0;
 }
-.portfolio-menu button.mixitup-control-active {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 2px solid #4bcaff;
-    color: #4bcaff;
-    padding: 10px 15px;
-    font-weight: 700;
-    transition: .4s;
-    text-transform: uppercase;
-}
+
 .portfolio-menu button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 2px solid transparent;
@@ -255,3 +253,27 @@ section {
     margin-bottom: 3em;
 }
 
+/* product view page*/
+.single-shop-product h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.add_to_cart_button {
+    background: none repeat scroll 0 0 #867d6b;
+    border: medium none;
+    color: #fff;
+    padding: 6px 25px;
+    display: inline-block;
+}
+
+.product-carousel-price ins {
+    color: #867d6b;
+    font-weight: 700;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.product-listing{
+    margin-top: 1em;
+}
