@@ -5,7 +5,7 @@ This should take you about 5-10 minutes.
 
 Assignment #2
 
-Make the text more attractive by sectioning the text, put the titles and the subtext in sections. Also make keywords (you can choose them yourself) more interesting by making them stand out.
+Make the text more attractive by sectioning the text, put the titles and the subtext in sections. Also make some keywords ( you can choose them yourself ) more interesting by making them stand out.
 This should take you about 10-15 minutes.
 
 Assignment #3
@@ -17,4 +17,6 @@ Assignment #4
 
 Oh no! There seems to be a broken image next to the MEN's wear image. Please fix the image and make sure all the images are linked correctly to their product pages.
 This should take you about 5-10 minutes.
+
+Good job coding novice! Now you know the very basics of html. Next week we will get our feet wet with some CSS. 
 

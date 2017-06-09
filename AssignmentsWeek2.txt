@@ -22,7 +22,10 @@ This should take you about 10-15 minutes
 
 Assignment #4
 
-
+Now let's take a look at the product pages and take a moment to check out the Men's, Women's and Kid's collection. Do you notice something about the borders? They don't look very nice do they. Please adjust the borders and give it a more minimalist look. 
+-We would like the border to be solid, 1px and the color #0088fd
 
 This should take you about 5-10 minutes.
+
+Wow, you did a great job today! Thank you for cleaning up the website. Next week we will introduce you to JavaScript... are you ready to be challenged?!
 
