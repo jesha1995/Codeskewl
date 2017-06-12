@@ -10,7 +10,7 @@ This should take you about 10-15 minutes.
 
 Assignment #3
 
-The "my account page" is not available please make sure our customers can access their account page again. The code for the navigation bar can be found in navigation.html.
+The "my account page" is not available please make sure our customers can access their account page again. The code for the navigation bar can be found in navigation.html, also make sure the BESTSELLER title leads back to index.html.
 This should take you about 5-10 minutes.
 
 Assignment #4
