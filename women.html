@@ -9,71 +9,52 @@
             img: 'images/women1.jpg',
             name: 'Ripped Jeans',
             brand: 'ONLY',
-            price: '60,00'
+            price: 60.00
         });
         productList.push({
             img: 'images/women2.jpg',
             name: 'Ripped Short Scallop',
             brand: 'ONLY',
-            price: '35,00'
+            price: 35.00
         });
         productList.push({
             img: 'images/women3.jpg',
             name: 'Checkered Blouse',
             brand: 'ONLY',
-            price: '30,00'
+            price: 30.00
         });
         productList.push({
             img: 'images/women4.jpg',
             name: 'Ripped Jeans Shorts',
             brand: 'ONLY',
-            price: '29,99'
+            price: 29.99
         });
         productList.push({
             img: 'images/women5.jpg',
             name: 'High Waist Pants',
             brand: 'ONLY',
-            price: '40,00'
+            price: 40.00
         });
         productList.push({
             img: 'images/women6.jpg',
             name: 'Ruffled T-shirt',
             brand: 'ONLY',
-            price: '30,00'
+            price: 30.00
         });
         productList.push({
             img: 'images/women7.jpg',
             name: 'Leaves Jacket',
             brand: 'ONLY',
-            price: '29,99'
+            price: 29.99
         });
         productList.push({
             img: 'images/women8.jpg',
             name: 'Striped T-shirt',
             brand: 'ONLY',
-            price: '25,00'
+            price: 25.00
         });
 
-        var products = '';
-        for (var i = 0; i < productList.length; i++){
-            var product = productList[i];
-            products+= '<div class="col-md-3 col-sm-6 product-listing">'+
-                '<div class="single-shop-product">'+
-                '<div class="product-upper">'+
-                '<img src="' + product.img + '" alt="" class="img-PLP">'+
-                '</div>'+
-                '<h2><a class="product-name" href="">' + product.name + '</a></h2>'+
-                '<div class="product-carousel-price">'+
-                '<ins>€' + product.price + '</ins>'+
-                '</div>'+
-                '<div class="product-option-shop">'+
-                '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'+
-                '</div>'+
-                '</div>'+
-                '</div>';
-        }
     </script>
-    <link rel="import" href="head.html">
 
 
 </head>
@@ -81,12 +62,12 @@
 <body style="background-color: #fff4c1;">
 <header id="header-nav"></header>
         <div class="container">
-            <div class="row">
-	            <script>
-	            document.write(products);
-	            </script>
+            <div class="row" id="product-list">
+
             </div>
         </div>
 </body>
-
+<script src="/js/moneyFormat.js"></script>
+<link rel="import" href="head.html">
+<script src="/js/productLister.js"></script>
 </html>
