@@ -1,93 +1,63 @@
 <!doctype html>
 
 <html lang="en" >
-<head>
-    <meta charset="UTF-8">
-    <script src="/js/moneyFormat.js"></script>
-    <script>
-        var productList = new Array;
-        productList.push({
-            img: 'images/kids1.jpg',
-            name: 'Butterfly Dress',
-            brand: 'ONLY',
-            price: '25,00'
-        });
-        productList.push({
-            img: 'images/kids2.jpg',
-            name: 'Pink Dress',
-            brand: 'ONLY',
-            price: '25,00'
-        });
-        productList.push({
-            img: 'images/kids3.jpg',
-            name: 'Jeans',
-            brand: 'ONLY',
-            price: '30,00'
-        });
-        productList.push({
-            img: 'images/kids4.jpg',
-            name: 'Striped Dress',
-            brand: 'ONLY',
-            price: '20,00'
-        });
-        productList.push({
-            img: 'images/kids5.jpg',
-            name: 'Surf Set',
-            brand: 'ONLY',
-            price: '20,00'
-        });
-        productList.push({
-            img: 'images/kids6.jpg',
-            name: 'Maxi Dress',
-            brand: 'ONLY',
-            price: '12,00'
-        });
-        productList.push({
-            img: 'images/kids7.jpg',
-            name: 'Flamingo Dress',
-            brand: 'ONLY',
-            price: '15,99'
-        });
-        productList.push({
-            img: 'images/kids8.jpg',
-            name: 'Smiley Shades Shirt',
-            brand: 'ONLY',
-            price: '25,00'
-        });
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var productList = [{
+                img: 'images/kids1.jpg',
+                name: 'Butterfly Dress',
+                brand: 'ONLY',
+                price: 25.00
+            },{
+                img: 'images/kids2.jpg',
+                name: 'Pink Dress',
+                brand: 'ONLY',
+                price: 24.99
+            },{
+                img: 'images/kids3.jpg',
+                name: 'Jeans',
+                brand: 'ONLY',
+                price: 29.99
+            },{
+                img: 'images/kids4.jpg',
+                name: 'Striped Dress',
+                brand: 'ONLY',
+                price: 20.00
+            },{
+                img: 'images/kids5.jpg',
+                name: 'Surf Set',
+                brand: 'ONLY',
+                price: 20.00
+            },{
+                img: 'images/kids6.jpg',
+                name: 'Maxi Dress',
+                brand: 'ONLY',
+                price: 12.00
+            },{
+                img: 'images/kids7.jpg',
+                name: 'Flamingo Dress',
+                brand: 'ONLY',
+                price: 15.99
+            },{
+                img: 'images/kids8.jpg',
+                name: 'Smiley Shades Shirt',
+                brand: 'ONLY',
+                price: 24.99
+            }];
 
-        var products = '';
-        for (var i = 0; i < productList.length; i++){
-            var product = productList[i];
-            products+= '<div class="col-md-3 col-sm-6 product-listing">'+
-                '<div class="single-shop-product">'+
-                '<div class="product-upper">'+
-                '<img src="' + product.img + '" alt="" class="img-PLP">'+
-                '</div>'+
-                '<h2><a class="product-name" href="">' + product.name + '</a></h2>'+
-                '<div class="product-carousel-price">'+
-                '<ins>€' + product.price + '</ins>'+
-                '</div>'+
-                '<div class="product-option-shop">'+
-                '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'+
-                '</div>'+
-                '</div>'+
-                '</div>';
-        }
-    </script>
-    <link rel="import" href="head.html">
+        </script>
+    </head>
 
+    <body style="background-color: #fff4c1;">
+    <header id="header-nav"></header>
+            <div class="container">
+                <div class="row" id="product-list">
 
-</head>
-
-<body style="background-color: #fff4c1;">
-<header id="header-nav"></header>
-        <div class="container">
-            <div class="row">
-	            <script>
-	            document.write(products);
-	            </script>
+                </div>
             </div>
-        </div>
-</body>
-
+    </body>
+    <script src="/js/moneyFormat.js"></script>
+    <link rel="import" href="head.html">
+    <script src="/js/productLister.js"></script>
 </html>

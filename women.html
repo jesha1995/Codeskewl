@@ -1,73 +1,74 @@
 <!doctype html>
 
 <html lang="en" >
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var productList = [{
+                img: 'images/women1.jpg',
+                name: 'Ripped Jeans',
+                brand: 'ONLY',
+                price: 60.00
+            },{
+                img: 'images/women2.jpg',
+                name: 'Ripped Short Scallop',
+                brand: 'ONLY',
+                price: 35.00
+            },{
+                img: 'images/women3.jpg',
+                name: 'Checkered Blouse',
+                brand: 'ONLY',
+                price: 30.00
+            },{
+                img: 'images/women4.jpg',
+                name: 'Ripped Jeans Shorts',
+                brand: 'ONLY',
+                price: 29.99
+            },{
+                img: 'images/women5.jpg',
+                name: 'High Waist Pants',
+                brand: 'ONLY',
+                price: 40.00
+            },{
+                img: 'images/women6.jpg',
+                name: 'Ruffled T-shirt',
+                brand: 'ONLY',
+                price: 30.00
+            },{
+                img: 'images/women7.jpg',
+                name: 'Leaves Jacket',
+                brand: 'ONLY',
+                price: 29.99
+            },{
+                img: 'images/women8.jpg',
+                name: 'Striped T-shirt',
+                brand: 'ONLY',
+                price: 25.00
+            }];
+        </script>
+
+    </head>
+    <body style="background-color: #fff4c1;">
+        <header id="header-nav"></header>
+            <div class="container">
+                <div class="row" id="search">
+                    <div class="search-form">
+                        <input type="text" id="searchValue">
+                        <input type="submit" onclick="search()">
+                    </div>
+                </div>
+                <div class="row" id="product-list"></div>
+            </div>
+    </body>
+
+    <script src="/js/moneyFormat.js"></script>
+    <link rel="import" href="head.html">
+    <script src="/js/productLister.js"></script>
     <script>
-        var productList = new Array;
-        productList.push({
-            img: 'images/women1.jpg',
-            name: 'Ripped Jeans',
-            brand: 'ONLY',
-            price: 60.00
-        });
-        productList.push({
-            img: 'images/women2.jpg',
-            name: 'Ripped Short Scallop',
-            brand: 'ONLY',
-            price: 35.00
-        });
-        productList.push({
-            img: 'images/women3.jpg',
-            name: 'Checkered Blouse',
-            brand: 'ONLY',
-            price: 30.00
-        });
-        productList.push({
-            img: 'images/women4.jpg',
-            name: 'Ripped Jeans Shorts',
-            brand: 'ONLY',
-            price: 29.99
-        });
-        productList.push({
-            img: 'images/women5.jpg',
-            name: 'High Waist Pants',
-            brand: 'ONLY',
-            price: 40.00
-        });
-        productList.push({
-            img: 'images/women6.jpg',
-            name: 'Ruffled T-shirt',
-            brand: 'ONLY',
-            price: 30.00
-        });
-        productList.push({
-            img: 'images/women7.jpg',
-            name: 'Leaves Jacket',
-            brand: 'ONLY',
-            price: 29.99
-        });
-        productList.push({
-            img: 'images/women8.jpg',
-            name: 'Striped T-shirt',
-            brand: 'ONLY',
-            price: 25.00
-        });
+        function search(){
+            var searchValue = document.getElementById('searchValue').value;
+            getProducts(searchValue);
+        }
 
     </script>
-
-
-</head>
-
-<body style="background-color: #fff4c1;">
-<header id="header-nav"></header>
-        <div class="container">
-            <div class="row" id="product-list">
-
-            </div>
-        </div>
-</body>
-<script src="/js/moneyFormat.js"></script>
-<link rel="import" href="head.html">
-<script src="/js/productLister.js"></script>
 </html>

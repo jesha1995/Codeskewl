@@ -1,8 +1,17 @@
-(function getProducts(productListed){
+function getProducts(filter){
     var element;
-    var products = '';
-    if (!productListed){
+    var products;
+    var productListed = [];
+    if (!filter){
         productListed = productList;
+    }
+    else {
+        for (var i = 0; i < productList.length; i++) {
+            var product = productList[i];
+            if(filter in product){
+                productListed.push(product);
+            }
+        }
     }
     for (var i = 0; i < productListed.length; i++){
         var product = productListed[i];
@@ -23,8 +32,7 @@
     }
     element = document.getElementById('product-list');
     element.innerHTML = products
-
-})();
-/**
- * Created by jesha.kuizenga on 14-7-2017.
- */
+    if(!products){
+        Alert('There are no such products');
+    }
+}getProducts();
