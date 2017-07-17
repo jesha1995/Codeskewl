@@ -52,12 +52,24 @@
     <body style="background-color: #fff4c1;">
     <header id="header-nav"></header>
             <div class="container">
+                <div class="row" id="search">
+                    <div class="search-form">
+                        <input type="text" id="searchValue">
+                        <input type="submit" onclick="search()">
+                    </div>
+                </div>
                 <div class="row" id="product-list">
-
                 </div>
             </div>
     </body>
     <script src="/js/moneyFormat.js"></script>
     <link rel="import" href="head.html">
     <script src="/js/productLister.js"></script>
+    <script>
+        function search(){
+            var searchValue = document.getElementById('searchValue').value;
+            getProducts(searchValue);
+        }
+
+    </script>
 </html>

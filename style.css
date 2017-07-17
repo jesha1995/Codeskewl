@@ -266,6 +266,19 @@ section {
     display: inline-block;
 }
 
+.search_button {
+    background: none repeat scroll 0 0 #867d6b;
+    border: medium none;
+    color: #fff !important;
+    padding: 3px 25px;
+    display: inline-block;
+}
+
+#searchValue{
+    margin-left: 15px;
+}
+
+
 .product-carousel-price ins {
     color: #867d6b;
     font-weight: 700;

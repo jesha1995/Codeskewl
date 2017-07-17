@@ -7,42 +7,42 @@
             var productList = [{
                 img: 'images/men1.jpg',
                 name: 'Blue Shorts',
-                brand: 'ONLY',
+                brand: 'Jack & Jones',
                 price: 35.00
             },{
                 img: 'images/men2.jpg',
                 name: 'Jeans Shorts',
-                brand: 'ONLY',
+                brand: 'Jack & Jones',
                 price: 45.00
             },{
                 img: 'images/men3.jpg',
                 name: 'Slim Fit Jeans',
-                brand: 'ONLY',
+                brand: 'Jack & Jones',
                 price: 99.99
             },{
                 img: 'images/men4.jpg',
                 name: 'T-Shirt Palmtree',
-                brand: 'ONLY',
+                brand: 'Only & Sons',
                 price: 30.00
             },{
                 img: 'images/men5.jpg',
                 name: 'T-Shirt Cali',
-                brand: 'ONLY',
+                brand: 'Selected Homme',
                 price: 25.00
             },{
                 img: 'images/men6.jpg',
                 name: 'Striped T-shirt',
-                brand: 'ONLY',
+                brand: 'Jack & Jones',
                 price: 30.00
             },{
                 img: 'images/men7.jpg',
                 name: 'Sunset T-shirt',
-                brand: 'ONLY',
+                brand: 'Only & Sons',
                 price: 29.99
             },{
                 img: 'images/men8.jpg',
                 name: 'Poloshirt',
-                brand: 'ONLY',
+                brand: 'Jack & Jones',
                 price: 25.00
             }];
         </script>
@@ -51,12 +51,29 @@
     <body style="background-color: #fff4c1;">
     <header id="header-nav"></header>
             <div class="container">
+                <div class="row" id="search">
+                    <div class="search-form">
+                        <input type="text" id="searchValue">
+                        <input type="submit" onclick="search()" class="search_button" value="Search">
+                    </div>
+                </div>
                 <div class="row" id="product-list">
-
                 </div>
             </div>
     </body>
     <script src="/js/moneyFormat.js"></script>
     <link rel="import" href="head.html">
     <script src="/js/productLister.js"></script>
+    <script>
+        function search(){
+            var searchValue = document.getElementById('searchValue').value;
+            getProducts(searchValue);
+        }
+
+        function cart() {
+
+
+        }
+
+    </script>
 </html>
