@@ -1,19 +1,13 @@
-function getProducts(filter){
+function getProducts(filter) {
     var element;
-    var products;
+    var products = '';
     var productListed = [];
-    if (!filter){
+    if (filter) {
+        productListed = filterItems(filter, productList);
+    } else {
         productListed = productList;
     }
-    else {
-        for (var i = 0; i < productList.length; i++) {
-            var product = productList[i];
-            if(filter in product){
-                productListed.push(product);
-            }
-        }
-    }
-    for (var i = 0; i < productListed.length; i++){
+    for (var i = 0; i < productListed.length; i++) {
         var product = productListed[i];
         products += '<div class="col-md-3 col-sm-6 product-listing">' +
             '<div class="single-shop-product">' +
@@ -31,8 +25,17 @@ function getProducts(filter){
             '</div>';
     }
     element = document.getElementById('product-list');
-    element.innerHTML = products
-    if(!products){
-        Alert('There are no such products');
+    if (!products) {
+        window.alert("there is no such item!");
+        element.innerHTML = '';
     }
-}getProducts();
+    else{
+        element.innerHTML = products;
+    }
+}
+getProducts();
+function filterItems(filter, products) {
+    return products.filter(function(el) {
+        return el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1  || el.brand.toLowerCase().indexOf(filter.toLowerCase()) > -1
+    })
+}
