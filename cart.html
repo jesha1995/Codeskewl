@@ -65,40 +65,38 @@
 
 <script>
 
-    var element;
+    var element = document.getElementById('cart-table');
     var products = '';
     var cartTotal = 0;
     var quantityTotal = 0;
-    for (var i = 0; i < productList.length; i++) {
-        var product = productList[i];
-        cartTotal += (product.price * product.quantity);
-        quantityTotal += product.quantity;
-        products += ' <tr><td>'+(i+1)+'</td>' +
-            '<td><a href="#"><img alt="" class="img-responsive cart-image" src="' + product.img + '"></a></td>' +
-            '<td><h6><a class="product-name" href="">' + product.name + '</a></h6></td>' +
-            '<td><input type="number" value="'+ product.quantity +'" name="quantity" min="1" max="5"></td>'+
-            '<td><div class="cart-price"><ins>€' + (product.price).formatMoney(2, ',', '.') + '</ins></div></td>' +
-            '<td><div class="cart-subtotal">€' + (product.price*product.quantity).formatMoney(2, ',', '.') + '</div></td></tr>';
-    }
-    products +='<tr id="total_colspan"> <td colspan="3" class="text-left">total</td> <td>'+ quantityTotal +'</td> <td>€' + (cartTotal).formatMoney(2, ',', '.') + '</td> <td colspan="2"> <a class="special_button" href="#" onclick="Checkout()">Checkout</a> </td> </tr>';
-    element = document.getElementById('cart-table');
-    if (!productList[0]) {
-        window.alert("there is no such item!");
-        element.innerHTML = '';
-    } else {
+
+    if(productList){
+        for (var i = 0; i < productList.length; i++) {
+            var product = productList[i];
+            cartTotal += (product.price * product.quantity);
+            quantityTotal += product.quantity;
+
+
+            products += ' <tr><td>' + (i + 1) + '</td>' +
+                '<td><a href="#"><img alt="" class="img-responsive cart-image" src="' + product.img + '"></a></td>' +
+                '<td><h6><a class="product-name" href="">' + product.name + '</a></h6></td>' +
+                '<td><input type="number" value="' + product.quantity + '" name="quantity" min="1" max="5"></td>' +
+                '<td><div class="cart-price"><ins>€' + (product.price).formatMoney(2, ',', '.') + '</ins></div></td>' +
+                '<td><div class="cart-subtotal">€' + (product.price * product.quantity).formatMoney(2, ',', '.') + '</div></td></tr>';
+
+
+        }
+        products += '<tr id="total_colspan"> <td colspan="3" class="text-left">total</td> <td>' + quantityTotal + '</td> <td>€' + (cartTotal).formatMoney(2, ',', '.') + '</td> <td colspan="2"> <a class="special_button" href="#" onclick="Checkout()">Checkout</a> </td> </tr>';
         element.innerHTML = products;
+
+    } else  {
+        window.alert("Your cart is empty O:");
+        element.innerHTML = '<td>This seems to be empty</td>';
     }
 
     function Checkout(){
         window.alert("Did you really think I'd make that?");
     }
 </script>
-
-
-
-
-
-
-
 
 </html>

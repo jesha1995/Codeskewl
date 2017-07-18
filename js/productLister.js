@@ -37,6 +37,6 @@ function getProducts(filter) {
 getProducts();
 function filterItems(filter, products) {
     return products.filter(function(el) {
-        return el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1  || el.brand.toLowerCase().indexOf(filter.toLowerCase()) > -1
+        return el.name.toLowerCase().indexOf(filter.toLowerCase()) > -1  || el.brand.toLowerCase().indexOf(filter.toLowerCase()) > -1;
     })
 }

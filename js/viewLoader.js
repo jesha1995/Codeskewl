@@ -1,8 +1,3 @@
-/**
- * Created by jesha.kuizenga on 12-5-2017.
- */
-
-
 
 // Loads the header view into the main page
 (function(){

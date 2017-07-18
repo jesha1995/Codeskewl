@@ -60,7 +60,7 @@
     <header id="header-nav"></header>
             <div class="container">
                 <div class="row" id="search">
-                    <form class="search-form" onsubmit="return search();">
+                    <form class="search-form" onsubmit="return search()">
                         <input type="text" id="searchValue">
                         <input type="submit" class="search_button" value="Search">
                     </form>
@@ -76,7 +76,7 @@
         function search(){
             var searchValue = document.getElementById('searchValue').value;
             getProducts(searchValue);
-            return false;
+            return false
         }
 
         function addToCart(id) {
