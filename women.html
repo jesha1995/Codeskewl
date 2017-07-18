@@ -5,41 +5,49 @@
         <meta charset="UTF-8">
         <script>
             var productList = [{
+                id: 'women1',
                 img: 'images/women1.jpg',
                 name: 'Ripped Jeans',
                 brand: 'ONLY',
                 price: 60.00
             },{
+                id: 'women2',
                 img: 'images/women2.jpg',
                 name: 'Ripped Short Scallop',
                 brand: 'ONLY',
                 price: 35.00
             },{
+                id: 'women3',
                 img: 'images/women3.jpg',
                 name: 'Checkered Blouse',
                 brand: 'ONLY',
                 price: 30.00
             },{
+                id: 'women4',
                 img: 'images/women4.jpg',
                 name: 'Ripped Jeans Shorts',
                 brand: 'ONLY',
                 price: 29.99
             },{
+                id: 'women5',
                 img: 'images/women5.jpg',
                 name: 'High Waist Pants',
                 brand: 'ONLY',
                 price: 40.00
             },{
+                id: 'women6',
                 img: 'images/women6.jpg',
                 name: 'Ruffled T-shirt',
                 brand: 'ONLY',
                 price: 30.00
             },{
+                id: 'women7',
                 img: 'images/women7.jpg',
                 name: 'Leaves Jacket',
                 brand: 'ONLY',
                 price: 29.99
             },{
+                id: 'women8',
                 img: 'images/women8.jpg',
                 name: 'Striped T-shirt',
                 brand: 'ONLY',
@@ -52,10 +60,10 @@
         <header id="header-nav"></header>
             <div class="container">
                 <div class="row" id="search">
-                    <div class="search-form">
+                    <form class="search-form" onsubmit="return search();">
                         <input type="text" id="searchValue">
-                        <input type="submit" onclick="search()">
-                    </div>
+                        <input type="submit" class="search_button" value="Search">
+                    </form>
                 </div>
                 <div class="row" id="product-list"></div>
             </div>
@@ -68,6 +76,23 @@
         function search(){
             var searchValue = document.getElementById('searchValue').value;
             getProducts(searchValue);
+            return false;
+        }
+
+        function addToCart(id) {
+            var arrOfItems = [];
+            if(sessionStorage["cart"]){
+                arrOfItems = JSON.parse ( sessionStorage.getItem("cart"));
+            }
+
+            var product;
+            product = productList.filter(function(el) {
+                return el.id === id;
+            });
+
+            arrOfItems.push(product[0]);
+            console.log(JSON.stringify(arrOfItems));
+            sessionStorage.setItem("cart", JSON.stringify(arrOfItems))
         }
 
     </script>

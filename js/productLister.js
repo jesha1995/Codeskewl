@@ -15,11 +15,12 @@ function getProducts(filter) {
             '<img src="' + product.img + '" alt="" class="img-PLP">' +
             '</div>' +
             '<h2><a class="product-name" href="">' + product.name + '</a></h2>' +
+            '<h5><a class="product-name" href="">' + product.brand + '</a></h5>' +
             '<div class="product-carousel-price">' +
             '<ins>€' + (product.price).formatMoney(2, ',', '.') + '</ins>' +
             '</div>' +
             '<div class="product-option-shop">' +
-            '<a class="add_to_cart_button" data-product_id="70" href="#">Add to cart</a>' +
+            '<a class="add_to_cart_button"  href="#" onclick="addToCart('+'\''+ product.id + '\''+')">Add to cart</a>' +
             '</div>' +
             '</div>' +
             '</div>';

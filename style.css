@@ -274,6 +274,14 @@ section {
     display: inline-block;
 }
 
+.special_button {
+    background: none repeat scroll 0 0 #867d6b;
+    border: medium none;
+    color: #fff !important;
+    padding: 3px 25px;
+    display: inline-block;
+}
+
 #searchValue{
     margin-left: 15px;
 }
@@ -292,9 +300,7 @@ section {
 
 .img-PLP{
     max-width:95%;
-    border-style: dotted;
-    border-width: 5px;
-    border-color: #836476;
+    border: dotted 5px #836476;
 }
 
 a:-webkit-any-link{
@@ -304,3 +310,24 @@ a:-webkit-any-link{
 a.product-name:hover{
   color: #867d6b;
 }
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 2px solid rgb(222, 214, 197);
+    border-collapse: collapse;
+    padding: 5px;
+
+}
+.cart-image{
+    max-width: 160px;
+    border: dotted 5px #836476;
+}
+
+.cart-svg{
+    width: 30px;
+    height:30px;
+}
+

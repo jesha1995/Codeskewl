@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <script>
+
+        var productList;
+        if(sessionStorage["cart"]) {
+            var rawProducts = JSON.parse(sessionStorage["cart"]);
+            productList = [];
+            for (var i = 0; i < rawProducts.length; i++) {
+                var product = rawProducts[i];
+                var productDone = false;
+                for (var x = 0; x < productList.length; x++) {
+                    var subProduct = productList[x];
+                    if (subProduct.id === product.id) {
+                        productDone = true;
+                        productList[x].quantity += 1;
+                    }
+                }
+                if(!productDone){
+                    product.quantity = 1;
+                    productList.push(product);
+                }
+            }
+
+        }
+
+
+
+    </script>
+
+</head>
+<body style="background-color: #fff4c1;">
+<header id="header-nav"></header>
+<div class="container">
+    <div class="col-xs-12">
+        <div class="cart_title">
+            <h4>Shopping Cart</h4>
+        </div>
+        <div class="table-responsive">
+            <table class="cart-table text-center">
+                <thead>
+                <tr id="cart_th">
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Product name</th>
+                    <th>QUANTITY</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody class="cart-list" id="cart-table">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/js/moneyFormat.js"></script>
+<link rel="import" href="head.html">
+
+<script>
+
+    var element;
+    var products = '';
+    var cartTotal = 0;
+    var quantityTotal = 0;
+    for (var i = 0; i < productList.length; i++) {
+        var product = productList[i];
+        cartTotal += (product.price * product.quantity);
+        quantityTotal += product.quantity;
+        products += ' <tr><td>'+(i+1)+'</td>' +
+            '<td><a href="#"><img alt="" class="img-responsive cart-image" src="' + product.img + '"></a></td>' +
+            '<td><h6><a class="product-name" href="">' + product.name + '</a></h6></td>' +
+            '<td><input type="number" value="'+ product.quantity +'" name="quantity" min="1" max="5"></td>'+
+            '<td><div class="cart-price"><ins>€' + (product.price).formatMoney(2, ',', '.') + '</ins></div></td>' +
+            '<td><div class="cart-subtotal">€' + (product.price*product.quantity).formatMoney(2, ',', '.') + '</div></td></tr>';
+    }
+    products +='<tr id="total_colspan"> <td colspan="3" class="text-left">total</td> <td>'+ quantityTotal +'</td> <td>€' + (cartTotal).formatMoney(2, ',', '.') + '</td> <td colspan="2"> <a class="special_button" href="#" onclick="Checkout()">Checkout</a> </td> </tr>';
+    element = document.getElementById('cart-table');
+    if (!productList[0]) {
+        window.alert("there is no such item!");
+        element.innerHTML = '';
+    } else {
+        element.innerHTML = products;
+    }
+
+    function Checkout(){
+        window.alert("Did you really think I'd make that?");
+    }
+</script>
+
+
+
+
+
+
+
+
+</html>
