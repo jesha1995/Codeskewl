@@ -33,31 +33,30 @@
 
 </head>
 <body style="background-color: #fff4c1;">
-<header id="header-nav"></header>
-<div class="container">
-    <div class="col-xs-12">
-        <div class="cart_title">
-            <h4>Shopping Cart</h4>
-        </div>
-        <div class="table-responsive">
-            <table class="cart-table text-center">
-                <thead>
-                <tr id="cart_th">
-                    <th>#</th>
-                    <th>Image</th>
-                    <th>Product name</th>
-                    <th>QUANTITY</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                </tr>
-                </thead>
-                <tbody class="cart-list" id="cart-table">
-
-                </tbody>
-            </table>
+    <header id="header-nav"></header>
+    <div class="container">
+        <div class="col-xs-12">
+            <div class="cart_title">
+                <h4>Shopping Cart</h4>
+            </div>
+            <div class="table-responsive" id="table-table-main">
+                <table class="cart-table text-center">
+                    <thead>
+                    <tr id="cart_th">
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Product name</th>
+                        <th>QUANTITY</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody class="cart-list" id="cart-table"></tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+    <footer></footer>
 </body>
 
 <script src="/js/moneyFormat.js"></script>
@@ -91,7 +90,8 @@
 
     } else  {
         window.alert("Your cart is empty O:");
-        element.innerHTML = '<td>This seems to be empty</td>';
+        var mainElement = document.getElementById('cart-table-main');
+        mainElement.innerHTML='';
     }
 
     function Checkout(){

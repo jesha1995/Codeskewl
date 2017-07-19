@@ -8,4 +8,12 @@
             header.innerHTML = text;
         });
     });
+
+    var footer = document.querySelector('footer');
+    myRequest = new Request('footer.html');
+    fetch(myRequest).then(function(response) {
+        return response.text().then(function(text) {
+            footer.innerHTML = text;
+        });
+    });
 })();

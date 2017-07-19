@@ -331,3 +331,11 @@ table, th, td {
     height:30px;
 }
 
+footer{
+    background-color: #867d6b;
+}
+
+
+footer h3,footer p,footer a,footer li  {
+    color: #ded6c5;
+}
