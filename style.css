@@ -334,6 +334,9 @@ table, th, td {
 footer{
     background-color: #867d6b;
 }
+#cart-container{
+    min-height:42em;
+}
 
 
 footer h3,footer p,footer a,footer li  {
