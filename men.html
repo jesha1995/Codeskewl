@@ -72,28 +72,6 @@
     </body>
     <script src="/js/moneyFormat.js"></script>
     <link rel="import" href="head.html">
-    <script src="/js/productLister.js"></script>
-    <script>
-        function search(){
-            var searchValue = document.getElementById('searchValue').value;
-            getProducts(searchValue);
-            return false
-        }
+    <script src="/js/Util.js"></script>
 
-        function addToCart(id) {
-            var arrOfItems = [];
-            if(sessionStorage["cart"]){
-                arrOfItems = JSON.parse ( sessionStorage.getItem("cart"));
-            }
-
-            var product;
-            product = productList.filter(function(el) {
-                return el.id === id;
-            });
-
-            arrOfItems.push(product[0]);
-            console.log(JSON.stringify(arrOfItems));
-            sessionStorage.setItem("cart", JSON.stringify(arrOfItems))
-        }
-    </script>
 </html>

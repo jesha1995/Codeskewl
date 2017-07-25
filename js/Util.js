@@ -40,3 +40,25 @@ function filterItems(filter, products) {
         return product.name.toLowerCase().indexOf(filter.toLowerCase()) > -1  || product.brand.toLowerCase().indexOf(filter.toLowerCase()) > -1;
     })
 }
+
+function search(){
+    var searchValue = document.getElementById('searchValue').value;
+    getProducts(searchValue);
+    return false
+}
+
+function addToCart(id) {
+    var arrOfItems = [];
+    if(sessionStorage["cart"]){
+        arrOfItems = JSON.parse ( sessionStorage.getItem("cart"));
+    }
+
+    var product;
+    product = productList.filter(function(el) {
+        return el.id === id;
+    });
+
+    arrOfItems.push(product[0]);
+    console.log(JSON.stringify(arrOfItems));
+    sessionStorage.setItem("cart", JSON.stringify(arrOfItems))
+}
