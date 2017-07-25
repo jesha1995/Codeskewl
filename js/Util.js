@@ -54,11 +54,11 @@ function addToCart(id) {
     }
 
     var product;
-    product = productList.filter(function(el) {
-        return el.id === id;
+    product = productList.filter(function(item) {
+        return item.id === id;
     });
 
     arrOfItems.push(product[0]);
     console.log(JSON.stringify(arrOfItems));
-    sessionStorage.setItem("cart", JSON.stringify(arrOfItems))
+    sessionStorage.setItem("cart", JSON.stringify(arrOfItems));
 }

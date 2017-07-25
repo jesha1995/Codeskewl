@@ -12,6 +12,7 @@
             for (var i = 0; i < rawProducts.length; i++) {
                 var product = rawProducts[i];
                 var productDone = false;
+
                 for (var x = 0; x < productList.length; x++) {
                     var subProduct = productList[x];
                     if (subProduct.id === product.id) {
@@ -19,6 +20,7 @@
                         productList[x].quantity += 1;
                     }
                 }
+
                 if(!productDone){
                     product.quantity = 1;
                     productList.push(product);
@@ -26,9 +28,6 @@
             }
 
         }
-
-
-
     </script>
 
 </head>
